@@ -15,6 +15,52 @@ export default class Game{
     }
 
     makeMove(i){
+        if(this.endofGame()){
+            return;
+        }
+
+        if(this.board[i]) {
+            return;
+        }
         this.board[i] = this.turn; 
+        let  winningCombination = this.findWinningCombinations();
+        
+        if(!winningCombination){
+            this.nextTurn();
+        }
+
+        
+    }
+
+    findWinningCombinations(){
+        const WinningCombinations= [
+            [0,1,2],
+            [3.4,5],
+            [6,7,8],
+            [0,3,6],
+            [1,4,7],
+            [2,5,8],
+            [0,4,8],
+            [6,4,2]
+        ]
+
+        for(const combination of WinningCombinations){
+            const[a,b,c] =  combination;
+
+            if(this.board[a] &&
+               (this.board[a] === this.board[b] && this.board[a] === this.board[c])) {
+                   return combination;
+               }
+        }
+        return null;
+    }
+
+    endofGame(){
+        let winningCombination =  this.findWinningCombinations();
+        if(winningCombination){
+            return true;
+        } else {
+            return false;
+        }
     }
 }

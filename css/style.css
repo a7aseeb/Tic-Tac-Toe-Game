@@ -8,14 +8,19 @@ body{
     color: #4c6986;
 }
 
+.title {
+    max-width: 500px;
+}
+
 .wrapper{
-    width: 1440px;
+    max-width: 1320px;
     height: 800px;
     /* background-color: yellow; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
+    padding: 40px;
 }
 
 h1{
@@ -49,7 +54,6 @@ h1{
 }
 .header{
     display: flex;
-    color: #9a9a9a;
     font-size: 24px;
 }
 
@@ -64,6 +68,18 @@ h1{
     border-bottom: 5px solid #eee;
     padding-bottom: 8px;
 }
+
+.player-x.active{
+    color: #42bed7;
+    border-color: #42bed7;
+}
+
+.player-o.active{
+    color: #d7bafb;
+    border-color: #d7bafb;
+}
+
+
 .board{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -94,3 +110,26 @@ h1{
     cursor: pointer;
 }
 
+.tile-x{
+    color: #42bed7;
+}
+
+.tile-o{
+    color: #d7bafb;
+}
+
+.tile-winner span{
+    color: green;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .left{
+        margin-bottom: 50px;
+    
+    }
+}

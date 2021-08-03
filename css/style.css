@@ -5,7 +5,8 @@
 
 body{
     font-family: "Merroweather Sans", sans-serif;
-    color: #4c6986;
+    color: #BC6FF1;
+    background-color: black;
 }
 
 .title {
@@ -34,7 +35,7 @@ h1{
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    border: 2px solid #4c6986;
+    border: 2px solid #52057B;
     transition: all 0.2s ease;
     cursor: pointer;
     font-weight: bold;
@@ -42,7 +43,7 @@ h1{
 }
 
 .restart:hover{
-    background-color: #4c6986;
+    background-color: #52057B;
     color: white;
 }
 
@@ -75,8 +76,8 @@ h1{
 }
 
 .player-o.active{
-    color: #d7bafb;
-    border-color: #d7bafb;
+    color: #d15151;
+    border-color: #d15151;
 }
 
 
@@ -105,7 +106,7 @@ h1{
 }
 
 .board-tile:hover{
-    background: #eee;
+    background: #BC6FF1;
     transition: all 0.2s ease;
     cursor: pointer;
 }
@@ -115,13 +116,33 @@ h1{
 }
 
 .tile-o{
-    color: #d7bafb;
+    color: #d15151;
 }
 
 .tile-winner span{
     color: green;
 }
 
+footer {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+footer a{
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+footer a:hover{
+    color: #BC6FF1;
+    font-size: 1.5em;
+    padding-left: 10px;
+}
 @media only screen and (max-width: 1200px) {
 
     .wrapper{
